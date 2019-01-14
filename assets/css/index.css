@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+/* -----  1.1 Font Definitions  --------------------------------------------- */
+
+/* brazilia */
+@font-face {
+  font-family: 'brazilia';
+  src: url(../fonts/pl-brazilia-seven.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* theinhardt */
+@font-face {
+  font-family: 'theinhardt';
+  src: url(../fonts/Theinhardt-Rg.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'theinhardt';
+  src: url(../fonts/Theinhardt-Md.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* la moda */
+@font-face {
+  font-family: 'la-moda';
+  src: url(../fonts/la-moda-nf.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* -----  1.2 Reset & Normalization  ---------------------------------------- */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+
+::-moz-selection {
+  background: #FF0000;
+  color: #000000;
+}
+
+::selection {
+  background: #FF0000;
+  color: #000000;
+}
+
+body {
+  background-color: #4765DA;
+  padding: 6em 6em 0 6em;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+
+.hamburger {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.toggle-overlay {
+}
+
+aside {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #FF0000;
+  transition: all .2s ease;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* -----  1.3 General Typography  ------------------------------------------- */
+
+/* Headings */
+h1, h3 {
+  font-family: brazilia, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-family: theinhardt;
+  font-weight: 500;
+  font-size: 2.75rem;
+  line-height: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-family: la-moda, times, serif;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-family: brazilia, Helvetica, Arial, sans-serif;
+}
+
+h5 {
+  font-family: la-moda, times, serif;
+  font-size:1.25rem;
+  font-weight: 200;
+}
+
+
+.title {
+  font-family: brazilia, Helvetica, Arial, sans-serif;
+}
+
+/* re-usable type classes */
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}
+
+.small-margin {
+  margin-bottom: 1em;
+}
+
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid #FF0000;
+}
+
+a:hover, a:focus, a:active {
+  color: #FF0000;
+}
+
+.menu-item {
+  margin-right: 2em;
+}
+
+/* layout */
+header {
+  flex-direction: row;
+  display: flex;
+  padding-bottom: 2em;
+  /*background-color: yellow !important;*/
+}
+
+header a{
+  border-bottom: none;
+}
+
+.site-container {
+  flex: 1;
+}
+
+footer {
+  text-align:center;
+  padding: 1em 0 1em 0;
+  /*background-color: green !important;*/
+}
+.menu {
+  /*background-color: azure;*/
+}
+
+.menu li {
+  display: inline-block;
+}
+
+
+/* flex blox */
+.flex-container {
+  flex: 1;
+  /*background-color: orange;*/
+}
+
+.purple {
+  background-color: #7500a6;
+}
+
+.flex-centered {
+  align-items: center;
+  justify-content: center;
+}
+
+/* flowers */
+
+.flower {
+  width: 371px;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.flower img {
+  z-index: 1;
+  width: 100%;
+  max-width: auto;
+}
+
+.flower-text {
+  font-family: theinhardt;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: .5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* The flexible column class contains styles shared between each column size */
+.col {
+  /* Add padding to create gutters between your grid columns */
+/*  padding-left: 5px;
+  padding-right: 5px;*/
+  /*background-color: lightpink;*/
+  /* The background color is just to help visualize the grid */
+}
+
+/* Define a series of classes that correspond to units of your grid.
+   Here, col-1 represents one unit in your grid.
+   The column width is calculated by dividing 100% by the number of columns in your grid.  */
+.col-1  { width: 8.33%; }
+.col-2  { width: 16.66%; }
+.col-3  { width: 25%; }
+.col-4  { width: 33.33%; }
+.col-5  { width: 41.66%; }
+.col-6  { width: 50%; }
+.col-7  { width: 58.33%; }
+.col-8  { width: 66.66%; }
+.col-9  { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
+
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+body {
+  padding: 3em 3em 0 3em
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+h4 {
+  font-size: 64px;
+}
+
+.menu-item {
+    margin-right: 0;
+}
+
+.hamburger {
+  width: auto;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      font-size: 3em;
+      z-index: 3;
+      position: fixed;
+      right: 2em;
+      cursor: pointer;
+}
+
+.menu {
+  display: none;
+}
+
+
+}
